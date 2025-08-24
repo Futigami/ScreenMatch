@@ -1,3 +1,5 @@
+import br.com.futigami.screenmatch.model.Filme;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -10,7 +12,7 @@ public class Principal {
         meuFilme.avalia(8);
         meuFilme.avalia(10);
         meuFilme.avalia(4);
-        System.out.println(meuFilme.getTotalAvaliacoes());
+        System.out.println("Total de avalicoes: " + meuFilme.getTotalAvaliacoes());
         System.out.println(meuFilme.retornaMediaAvaliacoes());
     }
 }

@@ -1,3 +1,5 @@
+package br.com.futigami.screenmatch.model;
+
 public class Filme {
     private String nome;
     private int anoLancamento;
@@ -7,17 +9,17 @@ public class Filme {
     private int duracaoMinutos;
 
     //Metodos
-    void exibeFichaTecnica(){
+    public void exibeFichaTecnica(){
         System.out.println("Nome do filme: " + getNome());
         System.out.println("Ano do lancamento: " + getAnoLancamento());
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalAvaliacoes++;
     }
 
-    double retornaMediaAvaliacoes(){
+    public double retornaMediaAvaliacoes(){
         return somaDasAvaliacoes / totalAvaliacoes;
     }
 

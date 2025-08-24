@@ -14,7 +14,7 @@ public class Principal {
         meuFilme.avalia(8);
         meuFilme.avalia(10);
         meuFilme.avalia(4);
-        System.out.println("Total de avalicoes: " + meuFilme.getTotalAvaliacoes());
+        System.out.println("Duracao do filme: " + meuFilme.getDuracaoMinutos());
         System.out.println(meuFilme.retornaMediaAvaliacoes());
 
         lost.setNome("Lost");
@@ -22,5 +22,7 @@ public class Principal {
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodioPorTemporada(10);
+        lost.setMinPorEpisodio(50);
+        System.out.println("Duracao para maratonar: " + lost.getDuracaoMinutos());
     }
 }

@@ -6,6 +6,9 @@ public class Serie extends Titulo{
     private boolean ativo;
     private int minPorEpisodio;
 
+    //Metodos
+
+
     //Getter and Setter
     public int getTemporadas() {
         return temporadas;
@@ -37,5 +40,10 @@ public class Serie extends Titulo{
 
     public void setMinPorEpisodio(int minPorEpisodio) {
         this.minPorEpisodio = minPorEpisodio;
+    }
+
+    @Override
+    public int getDuracaoMinutos() {
+        return temporadas * episodioPorTemporada * minPorEpisodio;
     }
 }

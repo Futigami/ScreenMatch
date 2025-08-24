@@ -1,6 +1,8 @@
 package br.com.futigami.screenmatch.model;
 
-public class Filme extends Titulo{
+import br.com.futigami.screenmatch.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public String getDiretor() {
@@ -9,5 +11,10 @@ public class Filme extends Titulo{
 
     public void setDiretor(String diretor) {
         this.diretor = diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int)retornaMediaAvaliacoes() / 2;
     }
 }

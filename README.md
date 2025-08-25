@@ -1,9 +1,7 @@
-🎬 Screenmatch
-
+🎬 SCREENMATCH
 Projeto desenvolvido durante a formação Java da Alura, com o objetivo de praticar os conceitos fundamentais da linguagem, boas práticas de programação e a estruturação de um sistema orientado a objetos.
 
-📌 Sobre o projeto
-
+📌 SOBRE O PROJETO
 O Screenmatch é uma aplicação em Java para gerenciar e avaliar filmes e séries.
 Nela é possível:
 
@@ -15,10 +13,6 @@ Exibir informações detalhadas das produções
 
 Praticar conceitos de POO, interfaces, herança e polimorfismo
 
-🛠️ Tecnologias utilizadas
-
-☕ Java 21+
-
-📦 Maven
-
-🐙 Git/GitHub
+🛠️ TECNOLOGIAS UTILIZADAS
+Java 21+
+Git/GitHub

@@ -1,3 +1,5 @@
+package br.com.futigami.screenmatch.principal;
+
 import br.com.futigami.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.futigami.screenmatch.calculos.FiltroRecomendacao;
 import br.com.futigami.screenmatch.model.Episodio;

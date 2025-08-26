@@ -9,8 +9,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão!");
+        Filme meuFilme = new Filme("O poderoso chefão!");
         meuFilme.setAnoLancamento(1970);
         meuFilme.setDuracaoMinutos(180);
         meuFilme.exibeFichaTecnica();
@@ -29,8 +28,7 @@ public class Principal {
         lost.setMinPorEpisodio(50);
         System.out.println("Duracao para maratonar: " + lost.getDuracaoMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoLancamento(2023);
         outroFilme.setDuracaoMinutos(200);
 
@@ -49,9 +47,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeErick = new Filme();
+        var filmeErick = new Filme("Deu a louca");
         filmeErick.setDuracaoMinutos(60);
-        filmeErick.setNome("Instance");
         filmeErick.setAnoLancamento(2000);
         filmeErick.avalia(10);
 
@@ -60,8 +57,10 @@ public class Principal {
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size()); //Mostra tamanho da lista
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome()); // ou get(0) -> getFirst()
         System.out.println(listaDeFilmes);
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString()); // ou get(0) -> getFirst()
+
+
     }
 }

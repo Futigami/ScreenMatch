@@ -5,6 +5,10 @@ import br.com.futigami.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
+    public Filme(String nomeFilme) {
+        this.setNome(nomeFilme);
+    }
+
     public String getDiretor() {
         return diretor;
     }

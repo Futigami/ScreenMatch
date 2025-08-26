@@ -4,6 +4,8 @@ import br.com.futigami.screenmatch.model.Episodio;
 import br.com.futigami.screenmatch.model.Filme;
 import br.com.futigami.screenmatch.model.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -46,5 +48,20 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeErick = new Filme();
+        filmeErick.setDuracaoMinutos(60);
+        filmeErick.setNome("Instance");
+        filmeErick.setAnoLancamento(2000);
+        filmeErick.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeErick);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size()); //Mostra tamanho da lista
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString());
     }
 }

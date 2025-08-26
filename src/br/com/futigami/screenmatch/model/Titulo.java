@@ -1,6 +1,7 @@
 package br.com.futigami.screenmatch.model;
 
-public class Titulo {
+
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoLancamento;
     private boolean incluidoNoPlano;
@@ -57,5 +58,10 @@ public class Titulo {
 
     public int getTotalAvaliacoes() {
         return totalAvaliacoes;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

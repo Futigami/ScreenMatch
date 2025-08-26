@@ -5,10 +5,11 @@ import br.com.futigami.screenmatch.model.Serie;
 import br.com.futigami.screenmatch.model.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("O poderoso chefão!",1970);
+        Filme meuFilme = new Filme("O poderoso chefão",1970);
         meuFilme.avalia(9);
         Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.avalia(6);
@@ -24,8 +25,24 @@ public class PrincipalComListas {
 
         for (Titulo titulo : lista){ // ou list.forEach(System.out::println);
             System.out.println(titulo);
-            Filme filme = (Filme) titulo;
-            System.out.println("Classificacao " + filme.getClassificacao());
+            if(titulo instanceof Filme filme && filme.getClassificacao() > 2){
+                System.out.println("Classificacao " + filme.getClassificacao());
+            }
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Erick");
+        buscaPorArtista.add("Joao");
+        buscaPorArtista.add("Thay");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenacao!!!");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de titulos ordenados!");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }

@@ -5,9 +5,16 @@ import br.com.futigami.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filme(String nomeFilme) {
-        this.setNome(nomeFilme);
+    public Filme(String nome, int anoLancamento) {
+        super(nome, anoLancamento);
     }
+
+    //Metodos
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoLancamento() + ")";
+    }
+
 
     public String getDiretor() {
         return diretor;
@@ -20,10 +27,5 @@ public class Filme extends Titulo implements Classificavel {
     @Override
     public int getClassificacao() {
         return (int)retornaMediaAvaliacoes() / 2;
-    }
-
-    @Override
-    public String toString() {
-        return "Filme: " + this.getNome() + " (" + this.getAnoLancamento() + ")";
     }
 }

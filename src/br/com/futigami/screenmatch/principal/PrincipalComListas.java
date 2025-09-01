@@ -6,6 +6,8 @@ import br.com.futigami.screenmatch.model.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class PrincipalComListas {
         filmeErick.avalia(10);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(filmeErick);
         lista.add(meuFilme);
         lista.add(outroFilme);
@@ -30,19 +32,22 @@ public class PrincipalComListas {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
-        buscaPorArtista.add("Adam Sandler");
-        buscaPorArtista.add("Paulo");
-        buscaPorArtista.add("Erick");
-        buscaPorArtista.add("Joao");
-        buscaPorArtista.add("Thay");
-        System.out.println(buscaPorArtista);
-
-        Collections.sort(buscaPorArtista);
-        System.out.println("Depois da ordenacao!!!");
-        System.out.println(buscaPorArtista);
-        System.out.println("Lista de titulos ordenados!");
+//        ArrayList<String> buscaPorArtista = new ArrayList<>();
+//        buscaPorArtista.add("Adam Sandler");
+//        buscaPorArtista.add("Paulo");
+//        buscaPorArtista.add("Erick");
+//        buscaPorArtista.add("Joao");
+//        buscaPorArtista.add("Thay");
+//        System.out.println(buscaPorArtista);
+//
+//        Collections.sort(buscaPorArtista);
+//        System.out.println("Depois da ordenacao!!!");
+//        System.out.println(buscaPorArtista);
+        System.out.println("Lista de titulos ordenados por nome!");
         Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println("Lista de titulos ordenados por ano de lancamento!");
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
         System.out.println(lista);
     }
 }

@@ -1,13 +1,7 @@
 package br.com.futigami.screenmatch.model;
 
-
-import com.google.gson.annotations.SerializedName;
-
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title")
     private String nome;
-
-    @SerializedName("Year")
     private int anoLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -17,6 +11,12 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(String nome, int anoLancamento) {
         this.nome = nome;
         this.anoLancamento = anoLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nome = meuTituloOmdb.title();
+        this.anoLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
     }
 
     public void exibeFichaTecnica(){
@@ -73,8 +73,9 @@ public class Titulo implements Comparable<Titulo> {
     @Override
     public String toString() {
         return "Titulo{" +
-                "nome='" + nome + '\'' +
-                ", anoLancamento=" + anoLancamento +
+                "Nome: '" + nome + '\'' +
+                ", Ano de Lancamento: " + anoLancamento + ", " +
+                "Duracao: " + duracaoMinutos +
                 '}';
     }
 }
